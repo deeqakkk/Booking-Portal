@@ -111,6 +111,8 @@ const SearchBookings = () => {
           </div>
         </div>
       </div>
+
+
     </>
   );
 };
