@@ -37,10 +37,6 @@ const AdminLogin = () => {
     }
   };
   const [showpass,setshowpass]=useState(false);
-  const [passicon,setpassicon]=useState(true);
-  /*const passwordtoggler = () =>{
-    setshowpass(!showpass);
-  }*/
   return (
     <>
       <div className="loginLogoContainer">
