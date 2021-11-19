@@ -55,7 +55,7 @@
 }
 .searchUpdateBlockPopup {
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   height: 7rem;
   width: 15.8rem;
 }
@@ -86,14 +86,14 @@
 .searchUpdateBlockDepartureDateContainer {
   width: 14rem;
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   margin: 0 0 0 0.5rem;
 }
 
 .searchUpdateBlockReturnDateContainer {
   width: 14rem;
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   margin: 0 0 0 0.5rem;
 }
 
@@ -176,7 +176,7 @@
 
 .searchUpdateBlockTravellerInfoContainer {
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   margin: 0 0 0 0.5rem;
 }
 .searchUpdateBlockErrorContainerTravelClass {
