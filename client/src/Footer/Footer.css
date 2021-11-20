@@ -10,7 +10,7 @@ footer{
   bottom: 0;
   left: 0;
   background: rgb(255, 255, 255);
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 footer .content{
   max-width: 1350px;
@@ -168,3 +168,7 @@ hr {
     height: 1px; 
     background-image: linear-gradient(to right, #f0f0f0, #00b9ff, #59d941, #f0f0f0);
   }
+.logoTextF {
+  width: max-content;
+  margin: 0rem 0 0 0rem;
+}

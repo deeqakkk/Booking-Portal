@@ -17,14 +17,14 @@ return (
         <i class="fas fa-phone fa-2x f-top-icon" style={{float:"left"}}></i>
         <div style={{float:"left", marginLeft:"10px"}}>
             <h3>Call Us</h3>
-            <p>+007 9089 6767</p>
+            <p>+91-7057962948</p>
         </div>
         </div>
         <div className="right box">
         <i class="fas fa-envelope-open fa-2x f-top-icon" style={{float:"left"}}></i>
         <div style={{float:"left", marginLeft:"10px"}}>
             <h3>Mail Us</h3>
-            <p>abc@gmail.com</p>
+            <p>Hello@Fly0kart.com</p>
         </div>
         </div>
     </div>
@@ -34,7 +34,11 @@ return (
      <div className="left box">
        <div className="upper">
          <div className="topic footer-widget-heading"><h3>About us</h3></div>
-         <img src="C:\Users\Kalpesh\OneDrive\Desktop\Fly0kart Intern\Fly0kart_2021\client\src\images\FlyOkartLogo.png"/>
+         <div class="logoContainer"><div class="logoTextF"><h1 class="logoH1">Fly0kart.com</h1></div>
+         <div class="logoImage">
+             <img src="/static/media/flyokart-plane-svg.42974c30.svg" alt="logo" class="logoSvg" />
+        </div>
+        </div>
          <p>FLY0KART is a Global Technology Company with the Heart of a Startup. Fly0kart we keep our customers at HEART.</p>
        </div>
        <div className="footer-social-icon">
@@ -86,7 +90,7 @@ return (
     </div>
     </div>
     <div className="bottom">
-        <p>Copyright © 2020 <a href="#">Fly0Kart</a> All rights reserved</p>
+        <p>Copyright ©{(new Date().getFullYear())} <a href="#">Fly0Kart</a> All rights reserved</p>
     </div>
 
    
