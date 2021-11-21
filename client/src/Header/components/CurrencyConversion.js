@@ -78,7 +78,6 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         onClick={() => {
           convertCurrency("USD", "$");
           setSpinner(true);
-          setSpinner(false);
         }}
       >
         <div className="flagIconContainer">
