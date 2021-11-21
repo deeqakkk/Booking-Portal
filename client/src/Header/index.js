@@ -78,7 +78,8 @@ const Header = () => {
           </div>
         </div>
         <div className="currencyConversionWrapper">
-          {CurrencyConversionError ? (
+        <>
+        {CurrencyConversionError ? (
             <HeadShake count={10}>
               <div className="currencyConversionError">
                 Error Converting Currency :- {CurrencyConversionError}
@@ -102,6 +103,8 @@ const Header = () => {
               <i class="fas fa-caret-down"></i>
             </div>
           </div>
+          </>
+        )}
         </div>
         <div className="currencyConversionModal">
           <CurrencyConversion
@@ -111,7 +114,6 @@ const Header = () => {
             }}
           />
         </div>
-
         <div className="login" ref={ref1}>
           {user_auth.auth ? (
             <div
