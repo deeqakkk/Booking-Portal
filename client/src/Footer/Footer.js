@@ -8,9 +8,14 @@ return (
     <div className="content" style={{paddingTop:"30px", paddingBottom:"30px"}}>
         <div className="left box">
         <i class="fas fa-map-marker-alt fa-2x f-top-icon" style={{float:"left"}}></i>
-        <div style={{float:"left", marginLeft:"10px"}}>
+        <div style={{marginLeft:"30px"}}>
             <h3>Find Us</h3>
-            <p>Address goes here</p>
+            <p>Flat no - 8, 
+            3rd floor,
+            Hindustan Angan. 
+            Lane no 13/D. 
+            Tingre nagar. 
+            Pune - 411032</p>
         </div>
         </div>
         <div className="middle box">
@@ -43,9 +48,10 @@ return (
        </div>
        <div className="footer-social-icon">
             <span>Follow us</span>
-            <a href="#"><i className="fab fa-facebook-f facebook-bg"></i></a>
-            <a href="#"><i className="fab fa-twitter twitter-bg"></i></a>
-            <a href="#"><i className="fab fa-google-plus-g google-bg"></i></a>
+            <a href="https://www.facebook.com/fly0kart/" target="blank"><i className="fab fa-facebook-f" target="blank"></i></a>
+            <a href="https://twitter.com/fly0kart" target="blank"><i className="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/fly0kart" target="blank"><i className="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/fly0kart" target="blank"><i className="fab fa-linkedin" target="blank"></i></a>
         </div>
        {/* <div className="lower">
          <div className="topic">Contact us</div>
@@ -59,11 +65,14 @@ return (
     </div>
     <div className="middle box">
        <div className="topic footer-widget-heading"><h3>Our Services</h3></div>
-       <div><a href="#">Service 1</a></div>
-       <div><a href="#">Service 2</a></div>
-       <div><a href="#">Service 3</a></div>
-       <div><a href="#">Service 4</a></div>
-       <div><a href="#">Service 5</a></div>
+       <div><a href="#">24/7 Customer Service</a></div>
+       <div><a href="#">Guaranteed resolution in 30 min</a></div>
+       <div><a href="#">Serving 187 countries & counting</a></div>
+       <div><a href="#">Best Customer service</a></div>
+       <div><a href="#">Quick Booking</a></div>
+       <div><a href="#">Partnership with more than 600 airlines</a></div>
+       <div><a href="#">Easy payments</a></div>
+       
     </div>
     <div className="right box">
        <div className="footer-widget">
@@ -89,9 +98,27 @@ return (
     </div>
     </div>
     </div>
+    <hr />
     <div className="bottom">
-        <p>Copyright ©{(new Date().getFullYear())} <a href="#">Fly0Kart</a> All rights reserved</p>
+        <div style={{float:"left", marginLeft:"10px"}}>
+            <p>Copyright ©{(new Date().getFullYear())} <a href="#" className="name">Fly0Kart</a> All rights reserved</p>     
+        </div>
+        <div className="footerMenu">
+            <a href="#" class="active">Home</a>
+            <a href="#">About US</a>
+            <a href="#">Services</a>
+            <a href="#">Contact US</a>
+            <a href="#">Policies</a>
+            <a href="#">Pay Now</a>
+        </div>
     </div>
+    {/* <div className="" style={{width:"50%", float:"right"}}>
+        <div style={{float:"right"}}>
+            <ul>
+                <li>Home</li>
+            </ul>
+        </div>
+    </div> */}
 
    
     </footer>
