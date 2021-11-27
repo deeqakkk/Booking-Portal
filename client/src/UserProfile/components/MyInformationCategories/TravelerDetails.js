@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./TravelerDetails.css";
 import DobInputField from "../Reusable-InputFields/DobInputField";
+import DOBPicker from "../Reusable-InputFields/DOBPicker";
 import Fade from "react-reveal/Fade";
 
 const TravelerDetails = () => {
@@ -59,7 +60,8 @@ const TravelerDetails = () => {
                     </div>
 
                     <div className="inputAndLabelDob">
-                      <DobInputField />
+                      {/* <DobInputField /> */}
+                      <DOBPicker />
                     </div>
                   </div>
                 </div>
