@@ -27,7 +27,7 @@ const FlightSummary = () => {
   );
   const trip1price = useSelector((state) => state.SearchResult.trip1Price);
   const trip2price = useSelector((state) => state.SearchResult.trip2Price);
-  var total = "";
+  var total = " ";
   if (trip2price) {
     total = parseInt(trip1price) + parseInt(trip2price);
   } else {
@@ -75,6 +75,7 @@ const FlightSummary = () => {
           <div className="itinerarySummaryHeaderTotal">
             {conversionSymbol}
             {tripTotalPrice}{" "}
+            {console.log("second : ", tripTotalPrice)}
             <span className="priceDescription">/ Person</span>
           </div>
         </div>
