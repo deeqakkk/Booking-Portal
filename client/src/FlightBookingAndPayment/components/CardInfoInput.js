@@ -538,7 +538,7 @@ const CardInfoInput = () => {
           </div>
           <div className="cardCvvWrapper">
           
-            <div className="cardExpiryHeader">Cvv*</div>
+            <div className="cardExpiryHeader">CVV*</div>
             <div
               className={`cardCvvContainer ${
                 Outline.outlineCardCvv === "card cvv" ? "check" : null
@@ -546,10 +546,10 @@ const CardInfoInput = () => {
             >
               <input
                 type="text"
-                size="3"
-                maxlength="4"
-                placeholder="Card Cvv*"
-                className="cardInfoInputField"
+                size="30"
+                maxlength="3"
+                placeholder="Card CVV*"
+                className="cardInfoInputField ci"
                 value={cardInfo.cardCvv ? cardInfo.cardCvv : null}
                 onFocus={() => {
                   setOutLine((prev) => {

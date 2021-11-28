@@ -95,7 +95,6 @@ const Header = () => {
             </div>
           </div>
           </>
-        )}
         </div>
         <div className="currencyConversionModal">
           <CurrencyConversion
