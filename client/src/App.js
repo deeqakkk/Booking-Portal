@@ -17,9 +17,9 @@ function App(props) {
 
   const dispatch = useDispatch();
 
-   useEffect(() => {
+  useEffect(() => {
     dispatch(userIsAuth());
-   }, [dispatch]);
+  }, [dispatch]);
   return (
     <Router>
       <div>
