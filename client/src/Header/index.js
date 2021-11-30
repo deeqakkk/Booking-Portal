@@ -67,16 +67,7 @@ const Header = () => {
             </div>
           </div>
         </Link>
-        <div className="mobileMenuIcon">
-          <div className="hamburgerMenu">
-            <i
-              class={`fas ${mobileMenu ? "fa-times" : "fa-bars"}`}
-              onClick={() => {
-                setMobileMenu((prev) => !prev);
-              }}
-            ></i>
-          </div>
-        </div>
+        
         <div className="currencyConversionWrapper">
         <>
         {CurrencyConversionError ? (
@@ -104,7 +95,6 @@ const Header = () => {
             </div>
           </div>
           </>
-        )}
         </div>
         <div className="currencyConversionModal">
           <CurrencyConversion
@@ -179,14 +169,25 @@ const Header = () => {
           </Pulse>
         ) : null}
 
-        <div className="contactUsBanner">
-          <div className="cancellationContainer">24 hours Cancellation! </div>
+        <div className="contactUsBanner d-flex">
+        <div className="mobileMenuIcon my-auto">
+          <div className="hamburgerMenu">
+            <i
+              class={`fas ${mobileMenu ? "fa-times" : "fa-bars"}`}
+              onClick={() => {
+                setMobileMenu((prev) => !prev);
+              }}
+            ></i>
+          </div>
+        </div>
+          <div><div className="cancellationContainer">24 hours Cancellation! </div>
           <div className="contactUsContainer">
             <div className="callUsIcon">
               <i class="fas fa-phone-alt"></i>
             </div>
             Call Us at 1800-FlyOkart
           </div>
+        </div>
         </div>
         {openRegistersignInModal ? (
           <LoginRegisterModal

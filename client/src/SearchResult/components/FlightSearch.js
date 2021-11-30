@@ -164,23 +164,23 @@ const FlightSearch = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="editBtn"
+            <div className="d-flex">
+              <div
+              className="my-auto marg"
               onClick={() => SetOpenModal((prev) => !prev)}
             >
-              <img className="editIcon" src={edit} alt="Open Edits" />
+              <i class="fas fa-edit"></i>
+              
             </div>
-            <div className="filtersContainer">
-              <img
-                className="filterIcon"
-                src={filter}
-                alt="Open Filters"
+            <div className="my-auto marg">
+              <i
+                className="fas fa-filter"
                 onClick={() => {
                   setOpenFilters(true);
                 }}
-              />
+              ></i>
             </div>
-            <div className="searchBlockMobileMenu">
+            <div className="my-auto">
               {searchUpdateMenu ? (
                 <i
                   class="fas fa-times"
@@ -196,6 +196,7 @@ const FlightSearch = () => {
                   }}
                 ></i>
               )}
+            </div>
             </div>
             {selectDepDate ? (
               openFilters ? (

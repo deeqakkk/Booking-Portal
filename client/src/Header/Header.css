@@ -1,8 +1,9 @@
 .headerContainer {
   background-color: #ffff;
+  justify-content: space-between;
   height: 60px;
   display: flex;
-  justify-content: space-between;
+   
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.1);
 }
 .mobileMenuIcon {
@@ -143,6 +144,7 @@
 .contactUsBanner {
   font-size: 0.8rem;
   height: max-content;
+  justify-content: flex-end;
   font-weight: 600;
   margin: 0.5rem 1.2rem 0 0.5rem;
 }
@@ -217,6 +219,11 @@
 
 /*-------------------------------Media_Queries---------------------------------*/
 @media screen and (max-width: 1370px) {
+  .mobileMenuIcon {
+    margin-right:1em;
+    display: block;
+    float:right;
+  }
   .conversionBtn {
     display: none;
   }
@@ -243,6 +250,7 @@
   .contactUsBanner {
     font-weight: 600;
     margin: 0.8rem 0rem 0 0.5rem;
+     
   }
   .cancellationContainer {
     font-size: 0.67rem;
@@ -255,6 +263,11 @@
   }
 }
 @media screen and (max-width: 1120px) {
+  .mobileMenuIcon {
+    margin-right:1em;
+    display: block;
+    float:right;
+  }
   .conversionBtn {
     display: none;
   }
@@ -281,6 +294,7 @@
   .contactUsBanner {
     font-weight: 600;
     margin: 0.8rem 0rem 0 0.5rem;
+     
   }
   .cancellationContainer {
     font-size: 0.67rem;
@@ -319,6 +333,7 @@
   .contactUsBanner {
     font-weight: 600;
     margin: 0.8rem 0rem 0 0.5rem;
+     
   }
   .cancellationContainer {
     font-size: 0.67rem;
@@ -358,6 +373,7 @@
   .contactUsBanner {
     font-weight: 600;
     margin: 0.8rem 0rem 0 0.5rem;
+     
   }
   .cancellationContainer {
     font-size: 0.67rem;
@@ -396,6 +412,7 @@
   .contactUsBanner {
     font-weight: 600;
     margin: 0.8rem 0rem 0 0.5rem;
+     
   }
   .cancellationContainer {
     font-size: 0.67rem;
@@ -434,6 +451,7 @@
   .contactUsBanner {
     font-weight: 600;
     margin: 0.8rem 0rem 0 0.5rem;
+     
   }
   .cancellationContainer {
     font-size: 0.67rem;
@@ -451,13 +469,8 @@
   }
   .mobileMenuIcon {
     display: block;
-    width: 15%;
+    margin-right:1em;
     text-align: center;
-  }
-  .fa-bars {
-    margin: 0.9rem 0 0 0;
-    color: #0d3c6f;
-    font-size: 24px;
   }
   .hamburgerMenu .fa-times {
     margin: 0.9rem 1.2rem 0 0;

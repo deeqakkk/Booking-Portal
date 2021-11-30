@@ -1,13 +1,20 @@
-.editSearchBlockDesktop {
-}
 .switchUpdateSearch {
   height: 40px;
   width: 40px;
 }
+.fas{
+  font-size: 1.4em;
+}
+.marg{
+  margin-left: 0.5em;
+  margin-right: 1em;
+}
 .editBtn {
   display: none;
 }
-
+.d-flex{
+  justify-content: space-between;
+}
 .backBtn {
   display: none;
 }
@@ -63,8 +70,6 @@
 
 .twowayTripDateContainer {
   display: none;
-}
-.airlineFilterContainerDesktop {
 }
 .SelectedFlightStatusContainerDesktop {
   display: flex;
@@ -238,7 +243,6 @@
     display: flex;
     justify-content: space-between;
     width: 99%;
-    justify-content: unset;
   }
 
   .backBtn {
@@ -291,11 +295,11 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+ /* .editIcon {
     width: 1.8rem;
     height: 2.8rem;
     transition: all 200ms ease;
-  }
+  }*/
 
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
@@ -353,7 +357,6 @@
     align-self: center;
     width: 3.2rem;
     height: 2.8rem;
-    background-color: rgb(146, 207, 218);
     border-radius: 100%;
     display: block;
   }
@@ -456,11 +459,11 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+  /*.editIcon {
     width: 1.8rem;
     height: 2.8rem;
     transition: all 200ms ease;
-  }
+  }*/
 
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
@@ -518,7 +521,6 @@
     align-self: center;
     width: 3.2rem;
     height: 2.8rem;
-    background-color: rgb(146, 207, 218);
     border-radius: 100%;
     display: block;
   }
@@ -529,6 +531,9 @@
   }
 }
 @media screen and (max-width: 1024px) {
+  .d-flex {
+    margin-left: 36em;
+}
   .editSearchBlockDesktop {
     display: none;
   }
@@ -614,11 +619,11 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+  /*.editIcon {
     width: 1.8rem;
     height: 2.8rem;
     transition: all 200ms ease;
-  }
+  }*/
 
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
@@ -683,17 +688,24 @@
     align-self: center;
     width: 2.8rem;
     height: 2.8rem;
-    background-color: rgb(146, 207, 218);
+     
     border-radius: 100%;
     display: block;
   }
 
-  .filterIcon {
+  .filterIcon{
     height: 2.2rem;
     padding: 0.45rem 0 0 0.5rem;
   }
 }
+@media screen and (max-width: 555px)
+{.d-flex {
+    margin-left: 5em;
+}}
 @media screen and (max-width: 840px) {
+  .d-flex {
+    margin-left: 22em;
+}
   .editSearchBlockDesktop {
     display: none;
   }
@@ -779,11 +791,11 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+  /*.editIcon {
     width: 1.8rem;
     height: 2.8rem;
     transition: all 200ms ease;
-  }
+  }*/
 
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
@@ -848,17 +860,20 @@
     align-self: center;
     width: 2.8rem;
     height: 2.8rem;
-    background-color: rgb(146, 207, 218);
+     
     border-radius: 100%;
     display: block;
   }
 
-  .filterIcon {
+  .filterIcon{
     height: 2.2rem;
     padding: 0.45rem 0 0 0.5rem;
   }
 }
 @media screen and (max-width: 770px) {
+  .d-flex {
+    margin-left: 19em;
+}
   .editSearchBlockDesktop {
     display: none;
   }
@@ -944,11 +959,11 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+ /* .editIcon {
     width: 1.8rem;
     height: 2.8rem;
     transition: all 200ms ease;
-  }
+  }*/
 
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
@@ -1013,17 +1028,20 @@
     align-self: center;
     width: 2.8rem;
     height: 2.8rem;
-    background-color: rgb(146, 207, 218);
+     
     border-radius: 100%;
     display: block;
   }
 
-  .filterIcon {
+  .filterIcon{
     height: 2.2rem;
     padding: 0.45rem 0 0 0.5rem;
   }
 }
 @media screen and (max-width: 670px) {
+  .d-flex {
+    margin-left: 10em;
+}
   .editSearchBlockDesktop {
     display: none;
   }
@@ -1109,11 +1127,11 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+  /*.editIcon {
     width: 1.8rem;
     height: 2.8rem;
     transition: all 200ms ease;
-  }
+  }*/
 
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
@@ -1178,7 +1196,7 @@
     align-self: center;
     width: 2.8rem;
     height: 2.8rem;
-    background-color: rgb(146, 207, 218);
+     
     border-radius: 100%;
     display: block;
   }
@@ -1189,6 +1207,9 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .d-flex {
+    margin-left: 0em;
+}
   .editSearchBlockDesktop {
     display: none;
   }
@@ -1281,11 +1302,11 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+ /* .editIcon {
     width: 1.3rem;
     height: 1.4rem;
     transition: all 200ms ease;
-  }
+  }*/
 
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
@@ -1350,7 +1371,7 @@
     align-self: center;
     width: 2.2rem;
     height: 2.2rem;
-    background-color: rgb(146, 207, 218);
+     
     border-radius: 100%;
     display: block;
   }
@@ -1365,6 +1386,9 @@
   }
 }
 @media screen and (max-width: 420px) {
+  .d-flex {
+    margin-left: 0em;
+}
   .editSearchBlockDesktop {
     display: none;
   }
@@ -1458,11 +1482,11 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+ /* .editIcon {
     width: 1.3rem;
     height: 1.4rem;
     transition: all 200ms ease;
-  }
+  }*/
 
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
@@ -1527,7 +1551,7 @@
     align-self: center;
     width: 1.8rem;
     height: 1.8rem;
-    background-color: rgb(146, 207, 218);
+     
     border-radius: 100%;
     display: block;
   }
@@ -1536,26 +1560,18 @@
     height: 1.4rem;
     padding: 0.4rem 0 0 0.4rem;
   }
-  .searchBlockMobileMenu {
-    text-align: center;
-  }
-  .searchBlockMobileMenu .fa-bars {
-    margin: 0.7rem 0.2rem 0 0;
-    color: black;
-  }
   .flightReviewModalContainer {
     position: fixed;
     bottom: 10rem;
   }
-
-  .searchBlockMobileMenu {
-  }
   .searchBlockMobileMenu .fa-times {
-    font-size: 1.65rem;
     margin: 0.2rem 0 0 0;
   }
 }
 @media screen and (max-width: 380px) {
+  .d-flex {
+    margin-left: -5em;
+}
   .editSearchBlockDesktop {
     display: none;
   }
@@ -1648,11 +1664,11 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+ /* .editIcon {
     width: 1.3rem;
     height: 1.4rem;
     transition: all 200ms ease;
-  }
+  }*/
 
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
@@ -1717,7 +1733,7 @@
     align-self: center;
     width: 2.2rem;
     height: 2.2rem;
-    background-color: rgb(146, 207, 218);
+     
     border-radius: 100%;
     display: block;
   }
@@ -1824,12 +1840,12 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+ /* .editIcon {
     width: 1.3rem;
     height: 1.4rem;
     transition: all 200ms ease;
   }
-
+*/
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
     top: -0.1%;
@@ -1893,7 +1909,7 @@
     align-self: center;
     width: 2.2rem;
     height: 2.2rem;
-    background-color: rgb(146, 207, 218);
+     
     border-radius: 100%;
     display: block;
   }
@@ -1999,12 +2015,12 @@
     align-self: center;
     display: block;
   }
-  .editIcon {
+ /* .editIcon {
     width: 1.2rem;
     height: 1.4rem;
     transition: all 200ms ease;
   }
-
+*/
   .modalOverLay {
     background: rgba(158, 155, 155, 0.493);
     top: -0.1%;
@@ -2068,7 +2084,7 @@
     align-self: center;
     width: 1.8rem;
     height: 1.8rem;
-    background-color: rgb(146, 207, 218);
+     
     border-radius: 100%;
     display: block;
   }
