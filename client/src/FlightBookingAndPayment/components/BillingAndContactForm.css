@@ -7,7 +7,7 @@
 }
 
 .headingTextContainer {
-  padding: 2rem;
+  padding: 1rem 1rem 0 1.5rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -39,9 +39,9 @@
 
 .countrySection {
   width: 100%;
-  height: 100%;
-  border: 2px solid rgb(0 0 0 / 20%);
-  border-radius: 0.5rem;
+  height: 2.4em;
+  border: 1.5px solid rgb(0 0 0 / 20%);
+  border-radius: 0.2rem;
   color: grey;
   transition: all 400ms ease;
 }
@@ -54,7 +54,7 @@
   padding: 0 0 0 0.2rem;
   font-family: "Poppins", sans-serif;
   border-radius: 0.5rem;
-  font-size: large;
+  font-size: 14px;
 }
 
 /*-----------------------------------------------Address--------------------------------------------*/
@@ -62,7 +62,7 @@
 .addressSectionWrapper {
   width: 50rem;
   height: 3rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .addressSection.Selected {
@@ -79,9 +79,9 @@
 
 .addressSection {
   width: 100%;
-  height: 100%;
-  border: 2px solid rgb(0 0 0 / 20%);
-  border-radius: 0.5rem;
+  height: 2.4em;
+  border: 1.5px solid rgb(0 0 0 / 20%);
+  border-radius: 0.2rem;
   color: grey;
   transition: all 400ms ease;
 }
@@ -94,7 +94,7 @@
   padding: 0 0 0 0.2rem;
   font-family: "Poppins", sans-serif;
   border-radius: 0.5rem;
-  font-size: large;
+  font-size: 14px;
 }
 
 /*------------------------------------------------------Zip------------------------------------------*/
@@ -102,7 +102,7 @@
 .zipSectionWrapper {
   width: 50rem;
   height: 3rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .zipSection.Selected {
@@ -119,9 +119,9 @@
 
 .zipSection {
   width: 100%;
-  height: 100%;
-  border: 2px solid rgb(0 0 0 / 20%);
-  border-radius: 0.5rem;
+  height: 2.4em;
+  border: 1.5px solid rgb(0 0 0 / 20%);
+  border-radius: 0.2rem;
   color: grey;
   transition: all 400ms ease;
 }
@@ -134,7 +134,7 @@
   padding: 0 0 0 0.2rem;
   font-family: "Poppins", sans-serif;
   border-radius: 0.5rem;
-  font-size: large;
+  font-size: 14px;
 }
 
 /*-------------------------------------------------------City------------------------------------------*/
@@ -142,7 +142,7 @@
 .citySectionWrapper {
   width: 50rem;
   height: 3rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .citySection.Selected {
@@ -159,9 +159,9 @@
 
 .citySection {
   width: 100%;
-  height: 100%;
-  border: 2px solid rgb(0 0 0 / 20%);
-  border-radius: 0.5rem;
+  height: 2.4em;
+  border: 1.5px solid rgb(0 0 0 / 20%);
+  border-radius: 0.2rem;
   color: grey;
   transition: all 400ms ease;
 }
@@ -173,7 +173,7 @@
   height: 100%;
   padding: 0 0 0 0.2rem;
   font-family: "Poppins", sans-serif;
-  font-size: large;
+  font-size: 14px;
   border-radius: 0.5rem;
 }
 
@@ -181,7 +181,7 @@
 .stateSectionWrapper {
   width: 50rem;
   height: 3rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .stateSection.Selected {
@@ -198,9 +198,9 @@
 
 .stateSection {
   width: 100%;
-  height: 100%;
-  border: 2px solid rgb(0 0 0 / 20%);
-  border-radius: 0.5rem;
+  height: 2.4em;
+  border: 1.5px solid rgb(0 0 0 / 20%);
+  border-radius: 0.2rem;
   color: grey;
   transition: all 400ms ease;
 }
@@ -212,7 +212,7 @@
   height: 100%;
   padding: 0 0 0 0.2rem;
   font-family: "Poppins", sans-serif;
-  font-size: large;
+  font-size: 14px;
   border-radius: 0.5rem;
 }
 
@@ -221,7 +221,7 @@
 .phoneSectionWrapper {
   width: 50rem;
   height: 3rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -239,9 +239,9 @@
 
 .phoneSection {
   width: 100%;
-  height: 100%;
-  border: 2px solid rgb(0 0 0 / 20%);
-  border-radius: 0.5rem;
+  height: 2.4em;
+  border: 1.5px solid rgb(0 0 0 / 20%);
+  border-radius: 0.2rem;
   color: grey;
   transition: all 400ms ease;
 }
@@ -253,12 +253,13 @@
   height: 100%;
   padding: 0 0 0 0.2rem;
   font-family: "Poppins", sans-serif;
-  font-size: large;
+  font-size: 14px;
   border-radius: 0.5rem;
 }
 
 .errMessage {
   color: red;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 420px) {
@@ -318,7 +319,7 @@
     width: 100%;
     height: 100%;
     padding: 0 0 0 0.2rem;
-    font-size: large;
+    font-size: 14px;
     font-family: "Poppins", sans-serif;
     border-radius: 0.5rem;
   }
@@ -327,7 +328,7 @@
   .addressSectionWrapper {
     width: 20rem;
     height: 3rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .addressSection.Selected {
@@ -359,7 +360,7 @@
     height: 100%;
     padding: 0 0 0 0.2rem;
     font-family: "Poppins", sans-serif;
-    font-size: large;
+    font-size: 14px;
     border-radius: 0.5rem;
   }
   /*--------------------------------------------------------Zip-----------------------------------*/
@@ -408,7 +409,7 @@
   .citySectionWrapper {
     width: 20rem;
     height: 3rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .citySection.Selected {
