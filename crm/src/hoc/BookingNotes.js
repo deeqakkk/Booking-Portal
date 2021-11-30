@@ -15,15 +15,10 @@ const BookingNotes = ({
   return ReactDom.createPortal(
     <>
       <div className="bookingNotesWrapper" ref={ref}>
-        <div
-          className="closeNotesContainer"
-          onClick={() => {
+      <i class="closeNotesContainer fas fa-times"></i>
+          <div className="" onClick={() => {
             closeNotes();
-          }}
-        >
-          <i class="fas fa-times"></i>
-        </div>
-
+          }}>
         <div className="bookingNotesHeader">
           <div className="bookingIdNotes">
             Booking ID - <b>{bookingid}</b>
@@ -41,7 +36,7 @@ const BookingNotes = ({
         <div className="notesContainer">
           <div className="bookingDetailsHeader">Booking Details-</div>
           <div className="bookingNotesDetails">
-            <input className="bookingDetailsInput"></input>
+            <textarea className="bookingDetailsInput"></textarea>
           </div>
         </div>
 
@@ -54,6 +49,7 @@ const BookingNotes = ({
             runAction={() => {}}
           />
         </div>
+      </div>
       </div>
     </>,
     document.getElementById("notesModal")

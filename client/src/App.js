@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -16,9 +17,9 @@ function App(props) {
 
   const dispatch = useDispatch();
 
-   useEffect(() => {
+  useEffect(() => {
     dispatch(userIsAuth());
-   }, [dispatch]);
+  }, [dispatch]);
   return (
     <Router>
       <div>

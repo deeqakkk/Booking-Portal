@@ -4,7 +4,7 @@ import SearchFlightBlock from "./components/SearchFlightBlock";
 import MyButton from "../Utilities/Button";
 import { useSelector, useDispatch } from "react-redux";
 import "./homePage.css";
-
+import Footer from "../Footer/Footer";
 ///REDUX
 import { setError } from "../actions/HomePageActions";
 const HomePage = () => {
@@ -91,6 +91,7 @@ const HomePage = () => {
           linkTo={handleLinks()}
         />
       </div>
+      <Footer />
     </>
   );
 };

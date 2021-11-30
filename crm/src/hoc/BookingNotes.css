@@ -1,7 +1,4 @@
 .bookingNotesWrapper {
-}
-
-.bookingNotesWrapper {
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   position: fixed;
@@ -23,7 +20,7 @@
 }
 
 .closeNotesContainer {
-  align-content: right;
+  margin-left: 92%;
   text-align: right;
 }
 
@@ -31,6 +28,7 @@
   font-size: 1.2rem;
   color: black;
   padding: 1.5% 2% 1% 1%;
+  cursor: pointer;
 }
 
 .bookingNotesHeader {

@@ -16,7 +16,7 @@ const FlightPackages = ({ package1Amt, package2Amt, package3Amt }) => {
   const [SupremeAmount, SetSupremeAmount] = useState(package3Amt);
   const [selectedPackage, setSelectedPackage] = useState({
     package_name: "premium",
-    package_price: 0,
+    package_price: 14.95,
   });
   useEffect(() => {
     dispatch(
