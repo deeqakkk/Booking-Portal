@@ -56,9 +56,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
       ref={ref}
     >
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USD", "$");
           closeCurrencyModal(false);
@@ -77,9 +76,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
       </div>
 
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDCAD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDCAD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDCAD", "C$");
 
@@ -99,9 +97,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
       </div>
 
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDGBP" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDGBP" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDGBP", "£");
 
@@ -121,9 +118,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
       </div>
 
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDAUD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDAUD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDAUD", "$");
 
@@ -143,9 +139,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
       </div>
 
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDCHF" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDCHF" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDCHF", "CHF");
 
@@ -164,9 +159,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDHKD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDHKD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDHKD", "$");
 
@@ -185,9 +179,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDJPY" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDJPY" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDJPY", "¥");
 
@@ -206,9 +199,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDCNY" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDCNY" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDCNY", "¥");
 
@@ -227,9 +219,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDINR" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDINR" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDINR", "₹");
 
@@ -248,9 +239,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDKYD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDKYD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDKYD", "CI$");
 
@@ -269,9 +259,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDAWG" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDAWG" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDAWG", "ƒ");
 
@@ -290,9 +279,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDBBD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDBBD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDBBD", "$");
 
@@ -311,9 +299,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDBSD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDBSD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDBSD", "$");
 
@@ -332,9 +319,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDDOP" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDDOP" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDDOP", "RD$");
 
@@ -353,9 +339,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDHTG" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDHTG" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDHTG", "G");
 
@@ -374,9 +359,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDJMD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDJMD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDJMD", "J$");
 
@@ -396,9 +380,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
       </div>
 
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDTTD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDTTD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDTTD", "TT$");
 
@@ -418,9 +401,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
       </div>
 
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDDKK" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDDKK" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDDKK", "KR");
 
@@ -440,9 +422,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
       </div>
 
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDNOK" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDNOK" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDNOK", "kr");
 
@@ -461,9 +442,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDSEK" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDSEK" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDSEK", "kr");
 
@@ -482,9 +462,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDHUF" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDHUF" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDHUF", "FT");
 
@@ -503,9 +482,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDMKN" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDMKN" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDMKN", "$");
 
@@ -524,9 +502,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDSGD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDSGD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDSGD", "$");
 
@@ -545,9 +522,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDAED" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDAED" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDAED", "AED");
 
@@ -566,9 +542,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDNZD" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDNZD" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDNZD", "$");
 
@@ -587,9 +562,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDZAR" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDZAR" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDZAR", "R");
 
@@ -608,9 +582,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDTRY" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDTRY" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDTRY", "TR");
 
@@ -629,9 +602,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDMRY" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDMRY" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDMRY", "RM");
 
@@ -650,9 +622,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDPHP" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDPHP" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDPHP", "p");
 
@@ -671,9 +642,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDLKR" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDLKR" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDLKR", "RS");
 
@@ -692,9 +662,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDNPR" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDNPR" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDNPR", "RS");
 
@@ -713,9 +682,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDBND" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDBND" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDBND", "$");
 
@@ -734,9 +702,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDIDR" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDIDR" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDIDR", "RP");
 
@@ -755,9 +722,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDMOP" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDMOP" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDMOP", "MOP$");
 
@@ -776,9 +742,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDSAR" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDSAR" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDSAR", "﷼");
 
@@ -797,9 +762,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDTHB" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDTHB" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDTHB", "฿");
 
@@ -818,9 +782,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDKRW" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDKRW" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDKRW", "₩");
 
@@ -839,9 +802,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         </div>
       </div>
       <div
-        className={`currencyWrapper ${
-          selectedCurrency === "USDISK" ? "select" : null
-        }`}
+        className={`currencyWrapper ${selectedCurrency === "USDISK" ? "select" : null
+          }`}
         onClick={() => {
           convertCurrency("USDISK", "KR");
 
