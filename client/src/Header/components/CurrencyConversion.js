@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./CurrencyConversion.css";
+import Loader from "react-loader-spinner";
 import useClickOutside from "../../Utilities/useClickOutside";
 import Flags from "country-flag-icons/react/3x2";
 import {
@@ -9,6 +10,7 @@ import {
 } from "../../actions/ApiActions";
 require("dotenv").config();
 const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
+  const [spinner, setSpinner] = useState(false);
   const selectedCurrency = useSelector(
     (state) => state.CurrencyConversion.ExchangeRate.countryCode
   );
@@ -16,6 +18,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
   const ref = useClickOutside(closeCurrencyModal);
   const api_key = process.env.REACT_APP_API_KEY;
   const convertCurrency = async (ID, Symbol) => {
+    setSpinner(true);
     await fetch(`http://apilayer.net/api/live?access_key=${api_key}`)
       .then((res) => {
         console.log(res);
@@ -48,20 +51,33 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
       .catch((err) => {
         dispatch(setCurrencyExchangeRateError(err.message));
       });
-  };
-
-  return (
-    <div
+      closeCurrencyModal(false);
+      setSpinner(false);
+    };
+  return ( 
+     <div
       className={`conversionWrapper ${modalOpen ? "open" : "close"}`}
       ref={ref}
     >
+      {spinner ? (
+      <div className="CCSpinner">
+        <Loader
+          type="MutatingDots"
+          color="#46B2E0"
+          secondaryColor="#0E3D6F"
+          height={100}
+          width={100}
+        />
+      </div>
+    ) : (
+    <>
       <div
         className={`currencyWrapper ${
           selectedCurrency === "USD" ? "select" : null
         }`}
         onClick={() => {
           convertCurrency("USD", "$");
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -82,8 +98,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDCAD", "C$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -104,8 +119,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDGBP", "£");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -126,8 +140,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDAUD", "$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -148,8 +161,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDCHF", "CHF");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -169,8 +181,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDHKD", "$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -190,8 +201,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDJPY", "¥");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -211,8 +221,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDCNY", "¥");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -232,8 +241,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDINR", "₹");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -253,8 +261,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDKYD", "CI$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -274,8 +281,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDAWG", "ƒ");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -295,8 +301,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDBBD", "$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -316,8 +321,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDBSD", "$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -337,8 +341,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDDOP", "RD$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -358,8 +361,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDHTG", "G");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -379,8 +381,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDJMD", "J$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -401,8 +402,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDTTD", "TT$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -423,8 +423,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDDKK", "KR");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -445,8 +444,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDNOK", "kr");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -466,8 +464,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDSEK", "kr");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -487,8 +484,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDHUF", "FT");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -508,8 +504,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDMKN", "$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -529,8 +524,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDSGD", "$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -550,8 +544,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDAED", "AED");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -571,8 +564,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDNZD", "$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -592,8 +584,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDZAR", "R");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -613,8 +604,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDTRY", "TR");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -634,8 +624,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDMRY", "RM");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -655,8 +644,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDPHP", "p");
-
-          closeCurrencyModal(false);
+          setSpinner(true)
         }}
       >
         <div className="flagIconContainer">
@@ -676,8 +664,8 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDLKR", "RS");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
+          
         }}
       >
         <div className="flagIconContainer">
@@ -697,8 +685,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDNPR", "RS");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -718,8 +705,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDBND", "$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -739,8 +725,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDIDR", "RP");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -760,8 +745,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDMOP", "MOP$");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -781,8 +765,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDSAR", "﷼");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -802,8 +785,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDTHB", "฿");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -823,8 +805,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDKRW", "₩");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -844,8 +825,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         }`}
         onClick={() => {
           convertCurrency("USDISK", "KR");
-
-          closeCurrencyModal(false);
+          setSpinner(true);
         }}
       >
         <div className="flagIconContainer">
@@ -859,7 +839,9 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
+    )}
+  </div>
   );
 };
 export default CurrencyConversion;

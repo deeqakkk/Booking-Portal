@@ -23,7 +23,7 @@
 }
 
 .closeNotesContainer {
-  align-content: right;
+  margin-left: 92%;
   text-align: right;
 }
 
@@ -31,6 +31,7 @@
   font-size: 1.2rem;
   color: black;
   padding: 1.5% 2% 1% 1%;
+  cursor: pointer;
 }
 
 .bookingNotesHeader {
