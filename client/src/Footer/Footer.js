@@ -48,10 +48,10 @@ return (
        </div>
        <div className="footer-social-icon">
             <span>Follow us</span>
-            <a href="https://www.facebook.com/fly0kart/" target="blank"><i className="fab fa-facebook-f" target="blank"></i></a>
-            <a href="https://twitter.com/fly0kart" target="blank"><i className="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/fly0kart" target="blank"><i className="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/fly0kart" target="blank"><i className="fab fa-linkedin" target="blank"></i></a>
+            <a href="https://www.facebook.com/fly0kart/" target="blank"><i className="fab fa-facebook-f facebook" target="blank"></i></a>
+            <a href="https://twitter.com/fly0kart" target="blank"><i className="fab fa-twitter twitter"></i></a>
+            <a href="https://www.instagram.com/fly0kart" target="blank"><i className="fab fa-instagram instagram"></i></a>
+            <a href="https://www.linkedin.com/company/fly0kart" target="blank"><i className="fab fa-linkedin-in linkedin" target="blank"></i></a>
         </div>
        {/* <div className="lower">
          <div className="topic">Contact us</div>
@@ -100,17 +100,17 @@ return (
     </div>
     <hr />
     <div className="bottom">
-        <div style={{float:"left", marginLeft:"10px"}}>
+        <div style={{marginLeft:"10px"}}>
             <p>Copyright ©{(new Date().getFullYear())} <a href="#" className="name">Fly0Kart</a> All rights reserved</p>     
         </div>
-        <div className="footerMenu">
+        {/* <div className="footerMenu">
             <a href="#" class="active">Home</a>
             <a href="#">About US</a>
             <a href="#">Services</a>
             <a href="#">Contact US</a>
             <a href="#">Policies</a>
             <a href="#">Pay Now</a>
-        </div>
+        </div> */}
     </div>
     {/* <div className="" style={{width:"50%", float:"right"}}>
         <div style={{float:"right"}}>
