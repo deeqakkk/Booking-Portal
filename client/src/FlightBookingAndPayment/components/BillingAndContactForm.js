@@ -163,7 +163,7 @@ const BillingAndContactForm = () => {
                   placeholder="  *Country"
                   value={userRegistration.country}
                   onChange={(e) => {
-                    setUserRegistration({ country: e.target.vlaue });
+                    setUserRegistration({ country: e.target.value });
                     validateCountry(e.target.value);
                   }}
                   name="country"
