@@ -181,12 +181,14 @@ const Header = () => {
           </div>
         </div>
           <div><div className="cancellationContainer">24 hours Cancellation! </div>
-          <div className="contactUsContainer">
-            <div className="callUsIcon">
-              <i class="fas fa-phone-alt"></i>
+          <a href="tel:+1800" style={{textDecoration:"none"}}>
+            <div className="contactUsContainer">
+              <div className="callUsIcon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              Call Us at 1800-FlyOkart
             </div>
-            Call Us at 1800-FlyOkart
-          </div>
+          </a>
         </div>
         </div>
         {openRegistersignInModal ? (
