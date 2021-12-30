@@ -1,7 +1,50 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import "./PopularFilters.css";
 
 const PopularFilters = ({ selectedFilter, setSelectedFilter }) => {
+  const [totalAmount, setTotalAmount] = useState();
+  const [totalAmount1, setTotalAmount1] = useState();
+  const [totalAmount2, setTotalAmount2] = useState();
+  const [totalAmount3, setTotalAmount3] = useState();
+  const [totalAmount4, setTotalAmount4] = useState();
+  const CurrencySymbol = useSelector(
+    (state) => state.CurrencyConversion.ExchangeRate.currencySymbol
+  );
+  const conversionRate = useSelector(
+    (state) => state.CurrencyConversion.ExchangeRate.currencyRate
+  );
+  useEffect(() => {
+    if (conversionRate) {
+      var price1 = parseInt(487) * conversionRate;
+      var p1 = Math.round(price1);
+      setTotalAmount(p1);
+    } else {
+      setTotalAmount(487);
+    }
+    if (conversionRate) {
+      var price1 = parseInt(455) * conversionRate;
+      var p1 = Math.round(price1);
+      setTotalAmount1(p1);
+    } else {
+      setTotalAmount1(455);
+    }
+    if (conversionRate) {
+      var price1 = parseInt(821) * conversionRate;
+      var p1 = Math.round(price1);
+      setTotalAmount2(p1);
+    } else {
+      setTotalAmount2(821);
+    }
+    if (conversionRate) {
+      var price1 = parseInt(467) * conversionRate;
+      var p1 = Math.round(price1);
+      setTotalAmount3(p1);
+    } else {
+      setTotalAmount3(467);
+    }
+    
+  });
   return (
     <div className="popularFiltersWrapper">
       <div className="popularFiltersContainer">
@@ -20,7 +63,9 @@ const PopularFilters = ({ selectedFilter, setSelectedFilter }) => {
               </div>
               Recommended
             </div>
-            <div className="popularFilterAvegragePrice">$487</div>
+            <div className="popularFilterAvegragePrice">
+              {CurrencySymbol}
+              {totalAmount}</div>
           </div>
 
           <div className="popularFilterDivision"></div>
@@ -39,7 +84,8 @@ const PopularFilters = ({ selectedFilter, setSelectedFilter }) => {
               </div>
               Cheapest
             </div>
-            <div className="popularFilterAvegragePrice">$455</div>
+            <div className="popularFilterAvegragePrice">{CurrencySymbol}
+              {totalAmount1}</div>
           </div>
           <div className="popularFilterDivision"></div>
           <div
@@ -57,7 +103,8 @@ const PopularFilters = ({ selectedFilter, setSelectedFilter }) => {
               </div>
               Shortest
             </div>
-            <div className="popularFilterAvegragePrice">$821</div>
+            <div className="popularFilterAvegragePrice">{CurrencySymbol}
+              {totalAmount2}</div>
           </div>
           <div className="popularFilterDivision"></div>
           <div
@@ -75,7 +122,8 @@ const PopularFilters = ({ selectedFilter, setSelectedFilter }) => {
               </div>
               Alternate Dates
             </div>
-            <div className="popularFilterAvegragePrice">$467</div>
+            <div className="popularFilterAvegragePrice">{CurrencySymbol}
+              {totalAmount3}</div>
           </div>
           <div className="popularFilterDivision"></div>
           <div
@@ -93,7 +141,8 @@ const PopularFilters = ({ selectedFilter, setSelectedFilter }) => {
               </div>
               Nearby Airports
             </div>
-            <div className="popularFilterAvegragePrice">$455</div>
+            <div className="popularFilterAvegragePrice">{CurrencySymbol}
+              {totalAmount1}</div>
           </div>
         </div>
       </div>
