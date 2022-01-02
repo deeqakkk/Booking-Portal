@@ -71,13 +71,13 @@ return (
     </div>
     <div className="middle box">
        <div className="topic footer-widget-heading"><h3>Our Services</h3></div>
-       <div><a href="#">24/7 Customer Service</a></div>
-       <div><a href="#">Guaranteed resolution in 30 min</a></div>
-       <div><a href="#">Serving 187 countries & counting</a></div>
-       <div><a href="#">Best Customer service</a></div>
-       <div><a href="#">Quick Booking</a></div>
-       <div><a href="#">Partnership with more than 600 airlines</a></div>
-       <div><a href="#">Easy payments</a></div>
+       <div><p>24/7 Customer Service</p></div>
+       <div><p>Guaranteed resolution in 30 min</p></div>
+       <div><p>Serving 187 countries & counting</p></div>
+       <div><p>Best Customer service</p></div>
+       <div><p>Quick Booking</p></div>
+       <div><p>Partnership with more than 600 airlines</p></div>
+       <div><p>Easy payments</p></div>
        
     </div>
     <div className="right box">
