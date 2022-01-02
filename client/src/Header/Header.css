@@ -389,6 +389,9 @@
   .conversionBtn {
     display: none;
   }
+  .mobile-hidden{
+    display: none;
+  }
   .currencyConversionModal {
     display: none;
   }
