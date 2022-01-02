@@ -67,33 +67,33 @@ const Header = () => {
             </div>
           </div>
         </Link>
-        
+
         <div className="currencyConversionWrapper">
-        <>
-        {CurrencyConversionError ? (
-            <HeadShake count={10}>
-              <div className="currencyConversionError">
-                Error Converting Currency :- {CurrencyConversionError}
+          <>
+            {CurrencyConversionError ? (
+              <HeadShake count={10}>
+                <div className="currencyConversionError">
+                  Error Converting Currency :- {CurrencyConversionError}
+                </div>
+              </HeadShake>
+            ) : (
+              ""
+            )}
+            <div
+              className={`conversionBtn ${
+                !CurrencyConversionError ? "withoutError" : ""
+              }`}
+              onClick={() => {
+                setCurrencyModal((prev) => !prev);
+                console.log(currencyModal);
+              }}
+            >
+              {currency}&nbsp;
+              {conversionSymbol}
+              <div className="dropDownIconCurrency">
+                <i class="fas fa-caret-down"></i>
               </div>
-            </HeadShake>
-          ) : (
-            ""
-          )}
-          <div
-            className={`conversionBtn ${
-              !CurrencyConversionError ? "withoutError" : ""
-            }`}
-            onClick={() => {
-              setCurrencyModal((prev) => !prev);
-              console.log(currencyModal);
-            }}
-          >
-            {currency}&nbsp;
-            {conversionSymbol}
-            <div className="dropDownIconCurrency">
-              <i class="fas fa-caret-down"></i>
             </div>
-          </div>
           </>
         </div>
         <div className="currencyConversionModal">
@@ -170,26 +170,27 @@ const Header = () => {
         ) : null}
 
         <div className="contactUsBanner d-flex">
-        <div className="mobileMenuIcon my-auto">
-          <div className="hamburgerMenu">
-            <i
-              class={`fas ${mobileMenu ? "fa-times" : "fa-bars"}`}
-              onClick={() => {
-                setMobileMenu((prev) => !prev);
-              }}
-            ></i>
-          </div>
-        </div>
-          <div><div className="cancellationContainer">24 hours Cancellation! </div>
-          <a href="tel:+1800" style={{textDecoration:"none"}}>
-            <div className="contactUsContainer">
-              <div className="callUsIcon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              Call Us at 1800-FlyOkart
+          <div className="mobileMenuIcon my-auto">
+            <div className="hamburgerMenu">
+              <i
+                class={`fas ${mobileMenu ? "fa-times" : "fa-bars"}`}
+                onClick={() => {
+                  setMobileMenu((prev) => !prev);
+                }}
+              ></i>
             </div>
-          </a>
-        </div>
+          </div>
+          <div class="mobile-hidden">
+            <div className="cancellationContainer">24 hours Cancellation! </div>
+            <a href="tel:+1800" style={{ textDecoration: "none" }}>
+              <div className="contactUsContainer">
+                <div className="callUsIcon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                Call Us at 1800-FlyOkart
+              </div>
+            </a>
+          </div>
         </div>
         {openRegistersignInModal ? (
           <LoginRegisterModal
