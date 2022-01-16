@@ -39,7 +39,7 @@ const AdminInfo = () => {
           {firstNameCapitalized} &nbsp;
           {lastNameCapitalized}
         </div>
-        <div class="my-auto">
+        <div>
           <div className="adminProfileContainer">Profile</div>
           <div className="BookingActionsContainer">
             <div
