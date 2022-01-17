@@ -578,11 +578,6 @@ const CardInfoInput = () => {
             </div>
           </div>
         </div>
-      <div >
-      <button className="btn paybtn">
-        <div class="pay">Make A Payment <div className="img2"><img className="" src={Img} height="25px" width="25px" alt="{pay}"></img></div> </div>
-        </button>
-        </div>
       </div>
     </div>
   );
