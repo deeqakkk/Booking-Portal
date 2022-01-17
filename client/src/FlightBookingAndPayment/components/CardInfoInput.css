@@ -5,7 +5,18 @@
   background-color: #ffff;
   height: max-content;
 }
-
+.paybtn{
+  margin:1%;
+  background-color: rgb(58, 219, 64);
+}
+.img2{
+  margin:0 10px;
+}
+.pay{
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
 .cardInfoInputHeader {
   font-size: 1.2rem;
   font-weight: 600;
