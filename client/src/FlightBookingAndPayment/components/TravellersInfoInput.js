@@ -8,8 +8,18 @@ import "./TravellerInfoInput.css";
 
 import { setDobDay, setDobMonth } from "../../actions/PaymentAndBookingActions";
 import { useSelector, useDispatch } from "react-redux";
+import MyButton from "../../Utilities/Button";
+import LoginRegisterModal from "../../Register-sign-in_sign-out/LoginRegisterModal";
+import SignOutModal from "../../Register-sign-in_sign-out/SignOutModal";
 
 const TravellerInfoInput = ({ travellerType, travellerNo }) => {
+
+  const [openRegistersignInModal, setOpenRegistersignInModal] = useState(false);
+  const [openSignOutModal, setOpenSignOutModal] = useState(false);
+  const handleLoginBtn = () => {
+    setOpenRegistersignInModal((prev) => !prev);
+  };
+
   const dispatch = useDispatch();
   const DOB_DAY = useSelector((state) => state.PaymentAndBooking.DOB_Day);
   const [dropDown, setDropDown] = useState(false);
@@ -448,17 +458,29 @@ const TravellerInfoInput = ({ travellerType, travellerNo }) => {
         <div className="travellerInfoInputHeader">Traveler Details</div>
         <div className="travellerInfoInputSignin">
           <div className="travellerInfoInputSigninTitle">Already a member?</div>
-          <div className="travellerInfoInputSigninBtn">
-            <div className="travellerInfoInputSigninIcon">
-              <i class="fas fa-user-alt"></i>
-            </div>
-            Sign in
-            <div className="travellerInfoInputSigninIcon">
-              <i class="fas fa-sort-down"></i>
-            </div>
-          </div>
+          <MyButton
+            type="default"
+            label="SignIn"
+            padding=" 6px 20px 6px 20px"
+            fontsize="16px"
+            runAction={handleLoginBtn}
+          />
         </div>
       </div>
+        {openRegistersignInModal ? (
+          <LoginRegisterModal
+            closeModal={() => {
+              setOpenRegistersignInModal(false);
+            }}
+          />
+        ) : null}
+        {openSignOutModal ? (
+          <SignOutModal
+            closeSignOutModal={() => {
+              setOpenSignOutModal(false);
+            }}
+          />
+        ) : null}
       <div
         className={`travellerInfoInputDetailsInstruction  ${
           travellerNo === 1 ? "Primary" : null
