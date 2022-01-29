@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { default as flyokartLogo } from "../../images/flyokart-plane-svg.svg";
 import { admin_login } from "../../actions/adminActions";
 import { Link, Redirect } from "react-router-dom";
-
+import Footer from '../../footer/Footer';
 const AdminLogin = () => {
   const dispatch = useDispatch();
   const [userRegistration, setUserRegistration] = useState({
@@ -109,6 +109,7 @@ const AdminLogin = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
