@@ -87,6 +87,9 @@ const FlightSummary = () => {
                 {dayofWeekD}, {monthD} {depDate.day}
               </div>
             </div>
+            <div className="d-none d-sm-block">
+                IndiGo Airlines Flight 8776
+              </div>
             <div className="cabinType">
               Cabin: <div className="cabinCode">{cabinClass}</div>
             </div>
@@ -100,7 +103,7 @@ const FlightSummary = () => {
                   src={airlineLogo}
                   alt="logo"
                 ></img>{" "}
-                <div className="airlineName">IndiGo</div>
+                <div className="airlineName">IndiGo<div className="flightno">Flight 8776</div></div>
               </div>
             </div>
 
@@ -151,6 +154,9 @@ const FlightSummary = () => {
                   {dayofWeekR}, {monthR} {desDate.day}
                 </div>
               </div>
+              <div className="d-none d-sm-block">
+                IndiGo Airlines Flight 8776
+              </div>
               <div className="cabinType">
                 Cabin:<div className="cabinCode">{cabinClass}</div>
               </div>
@@ -163,7 +169,7 @@ const FlightSummary = () => {
                     src={airlineLogo}
                     alt="logo"
                   ></img>{" "}
-                  <div className="airlineName">IndiGo</div>
+                  <div className="airlineName">IndiGo<div className="flightno">Flight 8776</div></div>
                 </div>
               </div>
 

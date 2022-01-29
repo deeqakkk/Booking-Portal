@@ -76,6 +76,7 @@
 .airlineLogoImgTag {
   height: 35px;
   width: 35px;
+  margin: 1rem 0.5rem;
 }
 .FlightDateInfoContainer {
   width: 14%;
@@ -260,4 +261,9 @@
     padding: 0.3rem 0 0 0.4rem;
     color: #878787;
   }
+}
+
+.flightno{
+  font-size: 0.8rem;
+  font-weight:500;
 }
