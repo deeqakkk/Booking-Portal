@@ -10,7 +10,7 @@ return (
         <i class="fas fa-map-marker-alt fa-2x f-top-icon" style={{float:"left"}}></i>
         <div style={{marginLeft:"30px"}}>
             <h3>Find Us</h3>
-            <a href="https://goo.gl/maps/cvw8UPbr4Vukp4mYA" target="_blank" style={{textDecoration:"none"}}>
+            <a href="https://goo.gl/maps/cvw8UPbr4Vukp4mYA" target={"_blank"}  style={{textDecoration:"none"}} >
             <p>Flat no - 8, 
             3rd floor,
             Hindustan Angan. 
