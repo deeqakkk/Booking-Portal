@@ -1102,17 +1102,31 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .homePageContainer {
+    height: max-content;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   .headingH3Airport, .labelH3, .headingH3 {
     background-color: #fff;
     color: #818181;
     border-radius: 2rem 0rem;
     width: auto;
-    padding: 0rem 1rem;
+    padding: 0rem 0rem;
     color: #818181;
     text-align: right;
 }
   .left > .selected-value > .headingH3Airport, .left > .cityname{
     text-align: left;
+  }
+
+  .left > .selected-value > .headingH3Airport{
+    text-align: left;
+    padding-left: .5rem;
+  }
+
+  .CityName_Placeholder{
+    margin: 1rem 0;
   }
 
   .searchBlock {
