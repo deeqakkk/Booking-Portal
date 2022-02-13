@@ -1107,6 +1107,9 @@
     max-width: 100%;
     overflow-x: hidden;
   }
+  .departureDateContainer .labelH3, .departureDateContainer .my-custom-input-class, .departureDateContainer .dateContainer .dayOfWeekDisplay{
+    text-align: left;
+  }
   .headingH3Airport, .labelH3, .headingH3 {
     background-color: #fff;
     color: #818181;
