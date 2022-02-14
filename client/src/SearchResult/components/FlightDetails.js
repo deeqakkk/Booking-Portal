@@ -227,6 +227,7 @@ const FlightDetails = ({
           {checkBoxStateR === "" ? (
             <Link
             to={!checkBoxStateD ? params : "/FlightBookingAndPayment"}
+            
           >
             <div
             onClick={() => {
@@ -321,7 +322,22 @@ const FlightDetails = ({
          </Link> ) : null}
         </>
       ) : (
-        <div>
+        <Link className="BookingLink" to="/FlightBookingAndPayment">
+        <div
+        onClick={() => {
+          setTotalTrip(
+            departureTime,
+            destinationTime,
+            flightPrice,
+            id,
+            "",
+            "",
+            "",
+            "",
+            flightPrice,
+            USDPrice
+          );
+        }}>
           <div className="flightDetailsHeader">
             <div className="airlineLogo">
               <img
@@ -439,6 +455,7 @@ const FlightDetails = ({
             </div>
           </div>
         </div>
+        </Link>
       )}
     </div>
   );

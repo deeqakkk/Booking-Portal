@@ -97,14 +97,13 @@
   color: #878787;
 }
 .destinationFlightLocation.selected {
-  color: black;
-}
-.maincontainer:hover{
-  color:#0d6efd;
+  color: #000;
 }
 .maincontainer{
   cursor: pointer;
-  border-bottom: 1px dotted grey;
+}
+a:hover{
+  color: #000 !important;;
 }
 .flightDetailsPrice {
   display: flex;
@@ -112,6 +111,7 @@
   font-weight: 600;
   width: 18%;
 }
+a:hover{color:none;}
 .BookingLink,a {
   text-decoration: none;
 }
