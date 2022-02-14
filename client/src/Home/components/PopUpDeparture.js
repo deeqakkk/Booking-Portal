@@ -19,6 +19,7 @@ const PopUpDeparture = ({
 }) => {
   const destination = useSelector((state) => state.Home.destination);
   const value = objstate;
+  const to = label;
   const [query, setQuery] = useState("");
 
   const ref = useClickOutSide(handleDropDown);
@@ -42,7 +43,7 @@ const PopUpDeparture = ({
 
   return (
     <div className="dropdown">
-      <div className="control">
+      <div className= {`control ${to === "FROM" ? "left" : "right"}`}>
         <div className="selected-value">
           <h3 className="headingH3Airport">{label}</h3>{" "}
         </div>

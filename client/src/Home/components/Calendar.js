@@ -17,6 +17,7 @@ const MyCalendar = ({
   openCalendarfromDesti,
   closeCalendar,
 }) => {
+  const flight = label;
   const ref = useOutSideClick1(
     setOpenCalendar,
     closeCalendar,
@@ -52,12 +53,13 @@ const MyCalendar = ({
 
   return (
     <>
+      <div className={`date-container ${flight === "DEPARTURE" ? "left" : "right"}`}>
       <h3 className="labelH3">{label}</h3>
       <div
         className="my-custom-input-class"
         onClick={() => setOpenCalendar(true)}
       >
-        {Date.mm} , {Date.day} ' {Date.year}
+        <p>{Date.mm} , {Date.day} ' {Date.year}</p>
       </div>
       <div className="dateContainer">
         <div className="dayOfWeekDisplay">{Date ? Date.dd : null}</div>
@@ -85,6 +87,7 @@ const MyCalendar = ({
             )}
           />
         ) : null}
+      </div>
       </div>
     </>
   );
