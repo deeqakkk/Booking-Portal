@@ -7,6 +7,7 @@ import "./homePage.css";
 import Footer from "../Footer/Footer";
 ///REDUX
 import { setError } from "../actions/HomePageActions";
+import Offers from "../Offers/Offers";
 const HomePage = () => {
   const dispatch = useDispatch();
   const departure = useSelector((state) => state.Home.departure);
@@ -91,6 +92,7 @@ const HomePage = () => {
           linkTo={handleLinks()}
         />
       </div>
+      <Offers/>
       <Footer />
     </>
   );
