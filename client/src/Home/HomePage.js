@@ -92,81 +92,96 @@ const HomePage = () => {
         />
       </div>
       <div class="container text-center mt-5">
-        <h4>About us</h4>
-          <div className="shadow-lg Aboutus rounded mx-auto">
-            <p className="text-center">
-            FLY0KART is a Global Technology Company with the Heart of a Startup. Fly0kart we keep our customers at HEART.
-            </p>
-          </div>
+        <h4>
+          <b>About us</b>
+        </h4>
+        <div className="shadow-lg Aboutus rounded mx-auto">
+          <p className="text-center">
+            FLY0KART is a Global Technology Company with the Heart of a Startup.
+            Fly0kart we keep our customers at HEART.
+          </p>
+        </div>
       </div>
       <div class="container mt-5">
-        <h4 className="text-center">Services</h4>
-          <div className="row Service">
-            <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
-                <ul>
-                <li>24*7 Customer Service</li>
-              </ul>
-            </div>
-            <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
-              <ul>
-                <li>Best Customer services</li>
-              </ul>
-            </div>
-            <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
-              <ul>
-                <li>Gaurenteed Production in 10 minute</li>
-              </ul>
-            </div>
-            <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
-              <ul>
-                <li>Partenership with more than 500 airlines</li>
-              </ul>
-            </div>
-            <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
-              <ul>
-                <li>Serving 187 Countries and currencies</li>
-              </ul>
-            </div>
-            <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
-              <ul>
-                <li>Quick Payments</li>
-              </ul>
-            </div>
+        <h4 className="text-center">
+          <b>Services</b>
+        </h4>
+        <div className="row Service">
+          <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
+            <ul>
+              <li>24*7 Customer Service</li>
+            </ul>
           </div>
+          <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
+            <ul>
+              <li>Best Customer services</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
+            <ul>
+              <li>Guaranteed Production in 10 minute</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
+            <ul>
+              <li>Partenership with more than 500 airlines</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
+            <ul>
+              <li>Serving 187 Countries and currencies</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 shadow-lg servicestyling rounded pt-3 pl-3 pr-3">
+            <ul>
+              <li>Quick Payments</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div className="container text-center mt-5">
-        <h4 class="mb-2">Contact</h4>
-          <div className="row mt-5">
-            <div className="col-lg-4 shadow-lg round">
-        <div class="contact-head">
-          <i class="fas fa-map-marker-alt fa-2x f-top-icon pt-3"></i><h3 class="p-3">Find Us</h3>
-          </div>
-            <a href="https://goo.gl/maps/cvw8UPbr4Vukp4mYA" target={"_blank"}  style={{textDecoration:"none"}} >
-            <p>Flat no - 8, 
-            3rd floor,
-            Hindustan Angan. 
-            Lane no 13/D. 
-            Tingre nagar. 
-            Pune - 411032</p>
-            </a>
+        <h4 class="mb-2 ">
+          <b>Contact</b>
+        </h4>
+        <div className="row mt-5">
+          <div className="col-lg-4 shadow-lg round">
+            <div class="contact-head">
+              <i class="fas fa-map-marker-alt fa-2x f-top-icon pt-3 mt-1"></i>
+              <h3 class="p-3">Find Us</h3>
             </div>
-            <div className="col-lg-4 shadow-lg round">
-            
-        <div class="contact-head">
-        <i class="fas fa-phone fa-2x pt-3 f-top-icon"></i><h3 class="p-3">Call Us</h3></div>
-            <a href="tel:+917057962948" style={{textDecoration:"none"}}>
-                <p>+917057962948</p>
-                </a>
-        </div>
-            <div className="col-lg-4 shadow-lg round">
-            
-        <div class="contact-head">
-        <i class="fas fa-envelope-open fa-2x f-top-icon pt-3"></i><h3 class="p-3">Mail Us</h3></div>
-            <a href="mailto:Hello@Fly0kart.com" style={{textDecoration:"none"}}>
-            <p>Hello@Fly0kart.com</p>
+            <a
+              href="https://goo.gl/maps/cvw8UPbr4Vukp4mYA"
+              target={"_blank"}
+              style={{ textDecoration: "none" }}
+            >
+              <p>
+                Flat no - 8, 3rd floor, Hindustan Angan. Lane no 13/D. Tingre
+                nagar. Pune - 411032
+              </p>
             </a>
-        </div>
           </div>
+          <div className="col-lg-4 shadow-lg round">
+            <div class="contact-head">
+              <i class="fas fa-phone fa-2x pt-3 f-top-icon mt-1"></i>
+              <h3 class="p-3">Call Us</h3>
+            </div>
+            <a href="tel:+917057962948" style={{ textDecoration: "none" }}>
+              <p>+917057962948</p>
+            </a>
+          </div>
+          <div className="col-lg-4 shadow-lg round">
+            <div class="contact-head">
+              <i class="fas fa-envelope-open fa-2x f-top-icon pt-3 mt-1"></i>
+              <h3 class="p-3">Mail Us</h3>
+            </div>
+            <a
+              href="mailto:Hello@Fly0kart.com"
+              style={{ textDecoration: "none" }}
+            >
+              <p>Hello@Fly0kart.com</p>
+            </a>
+          </div>
+        </div>
       </div>
       <Footer />
     </>
