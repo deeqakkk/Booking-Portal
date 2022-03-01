@@ -5,8 +5,8 @@ function Offers() {
   return (
       <>
         <div className='container mt-5'>
-            <div className='row'>
-                <div className='col summer'>
+            <div className='row main'>
+                <div className='col-12 summer'>
                     <div className='banner'>
                         <h3>This Summer</h3>
                         <p>Explore new beaches with</p>
