@@ -23,16 +23,16 @@ function Offers() {
                 <div className='col-12 col-md-6 left-container'>
                     <div className='offer-card'>
                         <img src={singapore} className='img-fluid'/>
-                        <div className='row mx-5 my-2'>
-                            <div className='col-md-6'>singapore</div>
-                            <div className='col-md-6'>
+                        <div className='row mx-1 mx-md-5 my-2'>
+                            <div className='col-6'>singapore</div>
+                            <div className='col-6'>
                                 <a className='float-end save'>Save 23%</a>
                             </div>
                         </div>
-                        <div className='row mx-5 my-3 pb-4'>
-                            <div className='col-md-6'>$208</div>
-                            <div className='col-md-6 '>
-                                <a className='float-end book-now'>Book Now</a>
+                        <div className='row mx-1 mx-md-5 my-2 pb-4'>
+                            <div className='col-6'>$208</div>
+                            <div className='col-6 '>
+                                <a className='float-end book-now' href="/">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@ function Offers() {
                                 <div className='row mx-1 my-1 pb-2'>
                                     <div className='col-6'>$208</div>
                                     <div className='col-6 '>
-                                        <a className='float-end book-now'>Book Now</a>
+                                        <a className='float-end book-now' href="/">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ function Offers() {
                                 <div className='row mx-1 my-1 pb-2'>
                                     <div className='col-6'>$208</div>
                                     <div className='col-6 '>
-                                        <a className='float-end book-now'>Book Now</a>
+                                        <a className='float-end book-now' href="/">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@ function Offers() {
                                 <div className='row mx-1 my-2 pb-2'>
                                     <div className='col-6'>$208</div>
                                     <div className='col-6 '>
-                                        <a className='float-end book-now'>Book Now</a>
+                                        <a className='float-end book-now' href="/">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@ function Offers() {
                                 <div className='row mx-1 my-2 pb-2'>
                                     <div className='col-6'>$208</div>
                                     <div className='col-6 '>
-                                        <a className='float-end book-now'>Book Now</a>
+                                        <a className='float-end book-now' href="/">Book Now</a>
                                     </div>
                                 </div>
                             </div>
