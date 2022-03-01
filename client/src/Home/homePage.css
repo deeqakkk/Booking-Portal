@@ -1,7 +1,58 @@
 .homePageContainer {
   height: max-content;
 }
+.contact-head{
+  display: flex;
+  justify-content: center;
+}
 
+.col-lg-4 {
+  width: 21%;
+  padding: 2%;
+  border: none;
+}
+.Aboutus p{
+padding:3em;
+}
+.servicestyling{
+  width: 40%;
+  margin: 2em 0;
+}
+ul{
+  list-style: none;
+}
+ul li::before{
+  content: "\2022";
+  color: blue;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+.round {
+  border-radius: 1.25rem !important;
+}
+@media screen and (max-width: 1040px) {
+  .col-lg-4 {
+    width: 25%;
+    padding: 2%;
+    border: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .col-lg-4{
+    margin-bottom: 10%;
+    width: 60%;
+    margin-top: 5%;
+    padding: 10%;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    border: none;
+  }
+}
+.row{
+  justify-content: space-evenly;
+}
 .temporaryMultiCityContainer {
   position: relative;
   top: 30%;
@@ -1102,6 +1153,10 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .servicestyling{
+    width: 46%;
+    margin: 2em 0;
+  }
   .homePageContainer {
     height: max-content;
     max-width: 100%;
