@@ -1,11 +1,39 @@
 .homePageContainer {
   height: max-content;
 }
+body{
+  background-color: #f2f2f2;
+}
 .contact-head{
   display: flex;
   justify-content: center;
 }
-
+.styles_faq-row-wrapper__3vA1D .styles_faq-row__2YF3c{
+  border: none!important;
+}
+.styles_row-title-text__1MuhU{
+font-weight: bold;
+}
+.queryinp{
+  height: 4em;
+  border-radius: 50px;
+  border: 1px solid grey;
+}
+.askbtn{
+  color: #2340D3;
+    margin: 5%;
+    border: 2px solid #2340D3;
+    width: 8rem;
+    padding: 1%;
+    background: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+.styles_faq-row-wrapper__3vA1D{
+  background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(200,200,200,1) 100%)!important;
+  padding:10% 14% 5% 14%;
+  border-radius: 20px;
+}
 .col-lg-4 {
   width: 21%;
   padding: 2%;
