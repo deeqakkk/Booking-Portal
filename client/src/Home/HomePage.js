@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 ///REDUX
 import { setError } from "../actions/HomePageActions";
 import Offers from "../Offers/Offers";
+import FAQ from "../FAQ/FAQ";
 const HomePage = () => {
   const dispatch = useDispatch();
   const departure = useSelector((state) => state.Home.departure);
@@ -93,6 +94,7 @@ const HomePage = () => {
         />
       </div>
       <Offers/>
+      <FAQ/>
       <Footer />
     </>
   );
