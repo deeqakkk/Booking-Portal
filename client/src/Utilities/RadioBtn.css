@@ -14,7 +14,9 @@
 }
 
 .customRadio.selected {
-  background-color: #a4d3e7;
+  background-color: #318fb5;
+  color: #ffffff;
+
 }
 @media screen and (max-width: 1370px) {
 }
