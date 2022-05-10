@@ -77,6 +77,7 @@ const HomePage = () => {
   };
   return (
     <>
+      <div className="home-container">
       <Header />
       <div className="searchFlightWrapper">
         <SearchFlightBlock />
@@ -97,6 +98,7 @@ const HomePage = () => {
       <Offers/>
       <FAQ/>
 
+      <div className="about-us">
       <div class="container text-center mt-5">
         <h4>
           <b>About us</b>
@@ -145,6 +147,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+  
       <div className="container text-center mt-5">
         <h4 class="mb-2 ">
           <b>Contact</b>
@@ -189,7 +192,8 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-
+      </div>
+</div>
       <Footer />
     </>
   );
