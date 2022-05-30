@@ -1,3 +1,16 @@
+.home-container{
+  background:url(flight.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about-us{
+  background-color: #ffffff;
+}
+
 .homePageContainer {
   height: max-content;
 }
@@ -64,7 +77,7 @@ ul li::before{
   margin-left: 7.5rem;
   background-color: #ffff;
   border-radius: 1.8rem;
-  box-shadow: 11px 11px 23px #d3d3d3, -11px -11px 23px #ededed;
+  /* box-shadow: 11px 11px 23px #d3d3d3, -11px -11px 23px #ededed; */
 }
 .searchBlock {
   position: relative;
