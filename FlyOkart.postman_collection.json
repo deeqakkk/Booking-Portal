@@ -1,0 +1,259 @@
+{
+    "info": {
+        "_postman_id": "3ebabc99-ffb9-48d7-b8b7-08f968e62cf7",
+        "name": "FlyOkart",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "16705222"
+    },
+    "item": [{
+            "name": "Client AUTH",
+            "item": [{
+                    "name": "Register user",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"firstName\":\"Deepak\",\r\n    \"lastName\":\"Verma\",\r\n    \"email\":\"deepak@gmail.com\",\r\n\"mobile\":\"7701834592\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:3002/api/auth/register",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3002",
+                            "path": [
+                                "api",
+                                "auth",
+                                "register"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "SIGN_IN USER",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n\"email\":\"deepak@gmail.com\",\r\n\"mobile\":\"\",\r\n\"signinOption\":\"email\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:3002/api/auth/signin",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3002",
+                            "path": [
+                                "api",
+                                "auth",
+                                "signin"
+                            ],
+                            "query": [{
+                                    "key": "mobile",
+                                    "value": "7701834592",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "channel",
+                                    "value": "sms",
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "VERIFY_OTP",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n\"email\":\"deepak@gmail.com\",\r\n\"mobile\":\"\",\r\n\"signinOption\":\"email\",\r\n\"hash\":\"ac05fda4b9bfd5017d33be10b5df23a852cde8bb7ece17f9c2d25392362c6aca.1633502317901\",\r\n\"otp\":\"602482\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:3002/api/auth/verifyOtp",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3002",
+                            "path": [
+                                "api",
+                                "auth",
+                                "verifyOtp"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ISAUTH",
+                    "protocolProfileBehavior": {
+                        "disabledSystemHeaders": {
+                            "connection": true,
+                            "accept-encoding": true,
+                            "accept": true,
+                            "user-agent": true,
+                            "host": true
+                        }
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [{
+                            "key": "Authorization",
+                            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTBiZGU4YTE3NDcwYzIxNzRkZjU1ZjUiLCJpYXQiOjE2Mjg0OTQ2NDAsImV4cCI6MTYyODU4MTA0MH0.lyZH5X7os9lFygetroj4A9FXHz8E7bQyfJgm_cIu9Hk",
+                            "type": "text"
+                        }],
+                        "url": {
+                            "raw": "http://localhost:3002/api/auth/isauth",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3002",
+                            "path": [
+                                "api",
+                                "auth",
+                                "isauth"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Admin AUTH",
+            "item": [{
+                    "name": "Register admin",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"email\":\"rameez@gmail.com\",\r\n    \"firstName\":\"Rameez\",\r\n    \"lastName\":\"Khan\",\r\n    \"password\":\"rameez123\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:3002/api/admin/register",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3002",
+                            "path": [
+                                "api",
+                                "admin",
+                                "register"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "SignIn admin",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"email\":\"krishna@gmail.com\",\r\n    \"password\":\"krishna\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:3002/api/admin/signin",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3002",
+                            "path": [
+                                "api",
+                                "admin",
+                                "signin"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "adminIsAuth",
+                    "request": {
+                        "method": "GET",
+                        "header": [{
+                            "key": "Authorization",
+                            "value": "Bearer ",
+                            "type": "text"
+                        }],
+                        "url": {
+                            "raw": "http://localhost:3002/api/admin/isauth",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3002",
+                            "path": [
+                                "api",
+                                "admin",
+                                "isauth"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "apikey"
+    },
+    "event": [{
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ]
+}
