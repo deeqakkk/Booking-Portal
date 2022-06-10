@@ -8,6 +8,7 @@ import Loginpopup from "./components/Loginpopup";
 import LoginRegisterModal from "../Register-sign-in_sign-out/LoginRegisterModal";
 import SignOutModal from "../Register-sign-in_sign-out/SignOutModal";
 import MobileMenu from "./components/MobileMenu";
+import Flags from "country-flag-icons/react/3x2";
 import useClickOutside from "../Utilities/useClickOutside";
 
 import { default as flyokartLogo } from "../images/flyokart-plane-svg.svg";
@@ -88,6 +89,9 @@ const Header = () => {
                 console.log(currencyModal);
               }}
             >
+              <div className="flagIconContainer">
+          <Flags.US title="United States" className="flagIcon" />
+        </div>
               {currency}&nbsp;
               {conversionSymbol}
               <div className="dropDownIconCurrency">

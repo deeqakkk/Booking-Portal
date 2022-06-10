@@ -7,27 +7,7 @@ const Filters = ({ dep, des }) => {
   const [airlineSelect, setAirlineSelect] = useState(false);
   return (
     <div className="filtersContentContainer">
-      <div className="sortByContentBlock">
-        <div className="sortHeader"> Sort By</div>
-        <div className="sortBlock">
-          <div className="sortIcon">
-            <i class="fas fa-rupee-sign"></i>
-          </div>
-          <div className="sortOptions">
-            <div className="sortLabel">Price </div>
-            <div className="sortSelect"> Cheapest First </div>
-          </div>
-        </div>
-        <div className="sortBlock">
-          <div className="sortIcon">
-            <i class="far fa-clock"></i>
-          </div>
-          <div className="sortOptions">
-            <div className="sortLabel">Duration </div>
-            <div className="sortSelect"> Shortest First </div>
-          </div>
-        </div>
-      </div>
+      
       <div className="filterContentBlock">
         <div className="filterHeader"> Filter By</div>
         <div className="filterBlock">

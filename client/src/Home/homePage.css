@@ -5,7 +5,10 @@
   display: flex;
   justify-content: center;
 }
-
+.searchBlock .departurePopUpContainer,.destinationPopUpContainer
+  {
+  border-right:1px solid #e7e7e7!important;
+}
 .col-lg-4 {
   width: 21%;
   padding: 2%;
@@ -70,20 +73,20 @@ ul li::before{
   position: relative;
   border: 1px solid #e7e7e7;
   border-radius: 1rem;
-  margin-top: 15vh;
+  margin-top: 6vh;
   display: flex;
   margin-left: 0.6rem;
-  height: 20.5vh;
+  /*height: 20.5vh;*/
 }
 
 .searchBlockContainer {
   width: max-content;
-  padding: 1rem 0 5rem 1rem;
+  padding: 1rem 0 3rem 1rem;
 }
 
 .radioButtons {
   position: absolute;
-  margin: 3.5rem 0 0 1rem;
+  margin: 0.5rem 0 0 1rem;
 }
 
 .headingH3 {
@@ -120,7 +123,7 @@ ul li::before{
 .popup {
   height: 9.4rem;
   width: 15.8rem;
-  border-right: 1px solid #e7e7e7;
+  /*border-right: 1px solid #e7e7e7;*/
 }
 
 .toggleSwitch {
@@ -290,10 +293,10 @@ ul li::before{
     position: relative;
     border: 1px solid #e7e7e7;
     border-radius: 1rem;
-    margin-top: 15vh;
+    margin-top: 10vh;
     display: flex;
     margin-left: 0.6rem;
-    height: 20.5vh;
+    /*height: 20.5vh;*/
   }
   
   .searchBlockContainer {
@@ -541,6 +544,7 @@ ul li::before{
   .destinationPopUpContainer {
     min-height: 6.4rem;
     border-bottom: none;
+    border-right:1px solid #e7e7e7;
     width: 50%;
   }
   .destinationPopUpContainer {
@@ -705,6 +709,7 @@ ul li::before{
   .destinationPopUpContainer {
     min-height: 6.4rem;
     border-bottom: none;
+    border-right:1px solid #e7e7e7;
     width: 72vw;
   }
   .destinationPopUpContainer {
@@ -868,6 +873,7 @@ ul li::before{
   .departurePopUpContainer,
   .destinationPopUpContainer {
     min-height: 6.4rem;
+    border-right:1px solid #e7e7e7;
     border-bottom: none;
   }
   .destinationPopUpContainer {
@@ -1032,6 +1038,7 @@ ul li::before{
   .departurePopUpContainer,
   .destinationPopUpContainer {
     min-height: 6.4rem;
+    border-right:1px solid #e7e7e7;
     border-bottom: none;
   }
   .destinationPopUpContainer {
