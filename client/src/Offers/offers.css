@@ -10,6 +10,7 @@
 
 .left-container {
     padding-left: 0px;
+    padding-right: 0px;
     border-radius: 10px;
     background-color: #fff;
 }
@@ -39,7 +40,7 @@
 .offer-card {
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 11px 11px 23px #d3d3d3, -11px -11px 23px #ededed;
+    /* box-shadow: 11px 11px 23px #d3d3d3, -11px -11px 23px #ededed; */
 }
 
 .offer-card>img {
