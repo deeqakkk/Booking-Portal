@@ -46,7 +46,7 @@
   transition: all 400ms ease;
 }
 
-.countrySection input {
+.countrySection select {
   border: none;
   outline: none;
   width: 100%;
