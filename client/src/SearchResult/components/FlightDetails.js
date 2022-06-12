@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./FlightDetails.css";
-
+import axios from 'axios';
 import {
   setSelectedTrip1DepartureFlightTime,
   setSelectedTrip1ArrivalFlightTime,
@@ -58,6 +58,21 @@ const FlightDetails = ({
   const [Trip2Amount, setTrip2Amount] = useState(parseInt(flightPriceR));
   const [totalAmount, setTotalAmount] = useState();
 
+  useEffect(()=>{
+    var bearer = 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTM1NDYwOTksImV4cCI6MTY1Mzk3ODA5OX0.0q8UFw8Njtnv8-Z1bR4H0lwgRGL2N7aHoos0ZaleOdY'
+    axios.get("http://localhost:8800/API/flight",{
+      headers: {
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': "GET, PUT, POST, DELETE, HEAD, OPTIONS",
+        'Token': bearer
+      }
+    }).then((res)=>{
+    console.log(res.data);
+    //console.log(flightdetails);
+    }).catch((err)=>{console.log(err);});
+  },[]);
+  
   useEffect(() => {
     if (conversionRate) {
       var price1 = flightPrice * conversionRate;
