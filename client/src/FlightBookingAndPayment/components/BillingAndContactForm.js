@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./BillingAndContactForm.css";
-
+import Bookingsetup from "./Booknowcomponent";
 const BillingAndContactForm = () => {
   const [userRegistration, setUserRegistration] = useState({
     country: "",
@@ -397,6 +397,7 @@ const BillingAndContactForm = () => {
           </form>
         </div>
       </div>
+<Bookingsetup/>
     </>
   );
 };

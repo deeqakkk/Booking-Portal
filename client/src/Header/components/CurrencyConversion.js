@@ -14,10 +14,12 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
   const selectedCurrency = useSelector(
     (state) => state.CurrencyConversion.ExchangeRate.countryCode
   );
+  let f;
   const dispatch = useDispatch();
   const ref = useClickOutside(closeCurrencyModal);
   const api_key = process.env.REACT_APP_API_KEY;
-  const convertCurrency = async (ID, Symbol) => {
+  const convertCurrency = async (ID, Symbol,flag) => {
+    console.log(flag);
     setSpinner(true);
     await fetch(`http://apilayer.net/api/live?access_key=${api_key}`)
       .then((res) => {
@@ -36,6 +38,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
             setCurrencyExchangeRate({
               currencyRate: result,
               currencySymbol: Symbol,
+              countryflag:flag,
               countryCode: ID,
               success: data.success,
             })
@@ -75,7 +78,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USD", "$");
+          convertCurrency("USD", "$",<Flags.US title="United States" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -95,7 +98,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDCAD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDCAD", "C$");
+          convertCurrency("USDCAD", "C$",<Flags.CA title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -115,7 +118,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDGBP" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDGBP", "£");
+          convertCurrency("USDGBP", "£",<Flags.GB title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -135,7 +138,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDAUD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDAUD", "$");
+          convertCurrency("USDAUD", "$",<Flags.AU title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -155,7 +158,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDCHF" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDCHF", "CHF");
+          convertCurrency("USDCHF", "CHF",<Flags.CH title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -174,7 +177,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDHKD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDHKD", "$");
+          convertCurrency("USDHKD", "$",<Flags.HK title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -193,7 +196,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDJPY" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDJPY", "¥");
+          convertCurrency("USDJPY", "¥",<Flags.JP title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -212,7 +215,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDCNY" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDCNY", "¥");
+          convertCurrency("USDCNY", "¥",<Flags.CN title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -231,7 +234,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDINR" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDINR", "₹");
+          convertCurrency("USDINR", "₹",<Flags.IN title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -250,11 +253,11 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDKYD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDKYD", "CI$");
+          convertCurrency("USDKYD", "CI$",<Flags.KY title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
-        <div className="flagIconContainer">
+       <div className="flagIconContainer">
           <Flags.KY title="United States" className="flagIcon" />
         </div>
         <div className="codeSymbolContainer">
@@ -269,7 +272,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDAWG" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDAWG", "ƒ");
+          convertCurrency("USDAWG", "ƒ",<Flags.AW title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -288,7 +291,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDBBD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDBBD", "$");
+          convertCurrency("USDBBD", "$",<Flags.BB title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -307,7 +310,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDBSD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDBSD", "$");
+          convertCurrency("USDBSD", "$",<Flags.BS title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -326,7 +329,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDDOP" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDDOP", "RD$");
+          convertCurrency("USDDOP", "RD$",<Flags.DO title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -345,7 +348,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDHTG" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDHTG", "G");
+          convertCurrency("USDHTG", "G",<Flags.HT title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -364,7 +367,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDJMD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDJMD", "J$");
+          convertCurrency("USDJMD", "J$",<Flags.JM title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -384,7 +387,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDTTD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDTTD", "TT$");
+          convertCurrency("USDTTD", "TT$",<Flags.TT title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -404,7 +407,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDDKK" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDDKK", "KR");
+          convertCurrency("USDDKK", "KR",<Flags.DK title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -424,7 +427,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDNOK" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDNOK", "kr");
+          convertCurrency("USDNOK", "kr",<Flags.NO title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -443,7 +446,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDSEK" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDSEK", "kr");
+          convertCurrency("USDSEK", "kr",<Flags.SE title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -462,7 +465,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDHUF" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDHUF", "FT");
+          convertCurrency("USDHUF", "FT",<Flags.HU title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -481,7 +484,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDMKN" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDMKN", "$");
+          convertCurrency("USDMKN", "$",<Flags.MX title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -500,7 +503,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDSGD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDSGD", "$");
+          convertCurrency("USDSGD", "$",<Flags.SG title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -519,7 +522,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDAED" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDAED", "AED");
+          convertCurrency("USDAED", "AED",<Flags.AE title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -538,7 +541,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDNZD" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDNZD", "$");
+          convertCurrency("USDNZD", "$",<Flags.NZ title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -557,7 +560,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDZAR" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDZAR", "R");
+          convertCurrency("USDZAR", "R",<Flags.ZA title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -576,7 +579,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDTRY" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDTRY", "TR");
+          convertCurrency("USDTRY", "TR",'<Flags.TR title={currency} className="logoborder" />');
           setSpinner(true);
         }}
       >
@@ -595,7 +598,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDMRY" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDMRY", "RM");
+          convertCurrency("USDMRY", "RM",<Flags.MY title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -614,7 +617,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDPHP" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDPHP", "p");
+          convertCurrency("USDPHP", "p",<Flags.PH title="USA" className="logoborder" />);
           setSpinner(true)
         }}
       >
@@ -633,7 +636,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDLKR" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDLKR", "RS");
+          convertCurrency("USDLKR", "RS",<Flags.LK title="USA" className="logoborder" />);
           setSpinner(true);
           
         }}
@@ -653,7 +656,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDNPR" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDNPR", "RS");
+          convertCurrency("USDNPR", "RS",<Flags.NP title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -672,7 +675,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDBND" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDBND", "$");
+          convertCurrency("USDBND", "$",<Flags.BN title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -691,7 +694,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDIDR" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDIDR", "RP");
+          convertCurrency("USDIDR", "RP",<Flags.ID title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -710,7 +713,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDMOP" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDMOP", "MOP$");
+          convertCurrency("USDMOP", "MOP$",<Flags.MO title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -729,7 +732,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDSAR" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDSAR", "﷼");
+          convertCurrency("USDSAR", "﷼",<Flags.SA title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -748,7 +751,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDTHB" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDTHB", "฿");
+          convertCurrency("USDTHB", "฿",<Flags.TH title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -767,7 +770,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDKRW" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDKRW", "₩");
+          convertCurrency("USDKRW", "₩",<Flags.KR title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
@@ -786,7 +789,7 @@ const CurrencyConversion = ({ modalOpen, closeCurrencyModal }) => {
         className={`currencyWrapper ${selectedCurrency === "USDISK" ? "select" : null
           }`}
         onClick={() => {
-          convertCurrency("USDISK", "KR");
+          convertCurrency("USDISK", "KR",<Flags.IS title="USA" className="logoborder" />);
           setSpinner(true);
         }}
       >
