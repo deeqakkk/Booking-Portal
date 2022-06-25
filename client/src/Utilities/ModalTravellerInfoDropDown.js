@@ -4,6 +4,7 @@ import MyButton from "./Button";
 import ReactDom from "react-dom";
 import Fade from "react-reveal";
 import HeadShake from "react-reveal/HeadShake";
+import { Link } from "react-router-dom";
 
 //REDUX
 import { useSelector, useDispatch } from "react-redux";
@@ -15,6 +16,9 @@ import {
   setTravellersTotal,
   setTravelClassError,
 } from "../actions/HomePageActions";
+
+import { setError } from "../actions/HomePageActions";
+
 const ModalTravellerInfoDropDown = ({
   closeTravellerModal,
   showTravellerModal,
@@ -41,6 +45,68 @@ const ModalTravellerInfoDropDown = ({
     dispatch(setInfantCount(e.target.value));
   };
 
+  const departure = useSelector((state) => state.Home.departure);
+  const destination = useSelector((state) => state.Home.destination);
+  const radio = useSelector((state) => state.Home.radio);
+  const error = useSelector((state) => state.Home.errorMessage);
+  const departureDate = useSelector((state) => state.Home.departureDate);
+  const returnDate = useSelector((state) => state.Home.returnDate);
+ 
+  const cabinClass = useSelector((state) => state.Home.travelClass);
+  const validation = () => {
+    if (departure && destination) {
+      if (departure.code === destination.code) {
+        dispatch(setError("From & to airports cannot be same"));
+      } else {
+        dispatch(setError(""));
+      }
+    }
+    if (departure === null && destination === null) {
+      dispatch(setError("please select departure & destination to proceed"));
+    }
+    if (radio === "twoway" && returnDate === "") {
+      dispatch(setError("Please select a return date to proceed"));
+    }
+  };
+  const handleSearchBtn = () => {
+    validation();
+  };
+
+  const handleLinks = () => {
+    if (error === "") {
+      var trip = "";
+      var query = "";
+
+      var depOne = departure ? departure.code : "";
+      var desOne = destination ? destination.code : "";
+
+      var depDateOneDay = departureDate.day.toString();
+      var depDateOnemonth = departureDate.month.toString();
+      var depDateOneyear = departureDate.year.toString();
+
+      if (radio === "oneway") {
+        trip = "OneWay";
+        query = `tripType=${trip}&itinerary=${depOne}-${desOne}_${depDateOneDay}-${depDateOnemonth}-${depDateOneyear}&A-${adultCount}_C-${childrenCount}_I-${infantCount}&cabinClass-${cabinClass}`;
+      } else if (radio === "twoway") {
+        if (returnDate) {
+          trip = "TwoWay";
+          var deptwo = destination ? destination.code : "";
+          var destwo = departure ? departure.code : "";
+          var depDatetwoDay = returnDate.day.toString();
+          var depDatetwomonth = returnDate.month.toString();
+          var depDatetwoyear = returnDate.year.toString();
+          query = `tripType=${trip}&itinerary=${depOne}-${desOne}_${depDateOneDay}-${depDateOnemonth}-${depDateOneyear}&${deptwo}-${destwo}_${depDatetwoDay}-${depDatetwomonth}-${depDatetwoyear}&A-${adultCount}_C-${childrenCount}_I-${infantCount}&cabinClass-${cabinClass}`;
+        } else {
+        }
+      }
+
+      const usp = new URLSearchParams(query);
+      var searchParams = usp.toString();
+
+      return `search/${searchParams}`;
+    }
+  };
+
   const handleClickClass = (e) => {
     var travelClassFormat = "";
 
@@ -53,6 +119,7 @@ const ModalTravellerInfoDropDown = ({
     }
     console.log(e.target.value);
     dispatch(setClass(travelClassFormat));
+    handleSearchBtn();
   };
 
   const calcTotalTravellers = () => {
@@ -246,6 +313,8 @@ const ModalTravellerInfoDropDown = ({
               <div className="modalTravelClassInfo">
                 {/*--------------------- 1st---------------------*/}
                 <ul className="modalTravelClassList">
+                <Link to={handleLinks()} onClick={() => {
+        handleSearchBtn();}}>
                   <li
                     className={` ${
                       travelClass === "Economy"
@@ -259,6 +328,9 @@ const ModalTravellerInfoDropDown = ({
                   >
                     Economy
                   </li>
+                  </Link>
+                  <Link to={handleLinks()} onClick={() => {
+        handleSearchBtn();}}>
                   <li
                     className={` ${
                       travelClass === "Premium Economy"
@@ -272,6 +344,9 @@ const ModalTravellerInfoDropDown = ({
                   >
                     Premium Economy
                   </li>
+                  </Link>
+                  <Link to={handleLinks()} onClick={() => {
+        handleSearchBtn();}}>
                   <li
                     className={` ${
                       travelClass === "Business"
@@ -285,6 +360,7 @@ const ModalTravellerInfoDropDown = ({
                   >
                     Business
                   </li>
+                  </Link>
                 </ul>
               </div>
             </div>
