@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./BillingAndContactForm.css";
+import Bookingsetup from "./Booknowcomponent";
 import { Country, State, City }  from 'country-state-city';
-
 const BillingAndContactForm = () => {
 
   const countries = Country.getAllCountries();
@@ -416,6 +416,7 @@ const BillingAndContactForm = () => {
           </form>
         </div>
       </div>
+<Bookingsetup/>
     </>
   );
 };

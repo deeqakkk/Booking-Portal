@@ -15,7 +15,7 @@ import { default as flyokartLogo } from "../images/flyokart-plane-svg.svg";
 import "./Header.css";
 
 import CurrencyConversion from "./components/CurrencyConversion";
-
+const f=<Flags.US title="USA"class="logoborder"/>;
 const Header = () => {
   const [currencyModal, setCurrencyModal] = useState(false);
   const [loginPopUpDisplayopen, setloginPopUpDisplayOpen] = useState(false);
@@ -40,6 +40,10 @@ const Header = () => {
 
   const currencyTitle = useSelector(
     (State) => State.CurrencyConversion.ExchangeRate.countryCode
+  );
+ 
+ const  currencyFlag = useSelector(
+    (State) => State.CurrencyConversion.ExchangeRate.countryflag
   );
   var currency = currencyTitle === "USD" ? "USD" : currencyTitle.slice(3, 7);
 
@@ -89,11 +93,11 @@ const Header = () => {
                 console.log(currencyModal);
               }}
             >
-              <div className="flagIconContainer">
-          <Flags.US title="United States" className="flagIcon" />
-        </div>
+              <div className="d-flex justify-content-between">
+              {currencyFlag==null?f:currencyFlag}&nbsp;
               {currency}&nbsp;
               {conversionSymbol}
+              </div>
               <div className="dropDownIconCurrency">
                 <i class="fas fa-caret-down"></i>
               </div>
