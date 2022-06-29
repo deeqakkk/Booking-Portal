@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import "./BillingAndContactForm.css";
 import Bookingsetup from "./Booknowcomponent";
+import { Country, State, City }  from 'country-state-city';
 const BillingAndContactForm = () => {
+
+  const countries = Country.getAllCountries();
+  const [countryDetails, setcountryDetails] = React.useState();
+  const [countryCode, setcountryCode] = React.useState();
+  const [selectedCountry, setSelectedCountry] = React.useState();
+
   const [userRegistration, setUserRegistration] = useState({
     country: "",
     address: "",
@@ -143,6 +150,8 @@ const BillingAndContactForm = () => {
     }
   };
 
+  
+
   return (
     <>
       <div className="mainContainer">
@@ -157,15 +166,16 @@ const BillingAndContactForm = () => {
                   outline.outlineCountry === "country" ? "Selected" : null
                 } ${err.errCountry ? "error" : null} `}
               >
-                <input
-                  type="text"
+                <select
                   autoComplete="none"
-                  placeholder="  *Country"
                   value={userRegistration.country}
                   onChange={(e) => {
                     setUserRegistration({ country: e.target.value });
                     validateCountry(e.target.value);
+                    setcountryCode(e.target.value);
+                    setSelectedCountry(Country.getCountryByCode(countryCode).name);
                   }}
+                  placeholder="Country"
                   name="country"
                   id="country"
                   onFocus={() => {
@@ -184,8 +194,17 @@ const BillingAndContactForm = () => {
                       };
                     });
                     validateCountry(e.target.value);
-                  }}
-                />
+                  }}>
+                    <option>--Choose Country--</option>
+                    {countries.map((value, key) => {
+                      return (
+                        <option value={value.isoCode}>
+                          {value.name}
+                          
+                        </option>
+                      );
+                    })}
+                </select>
               </div>
               <div className="errMessage">
                 {err.errCountry ? err.errCountry : ""}
