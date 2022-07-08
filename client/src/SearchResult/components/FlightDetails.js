@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./FlightDetails.css";
-import axios from 'axios';
+
 import {
   setSelectedTrip1DepartureFlightTime,
   setSelectedTrip1ArrivalFlightTime,
